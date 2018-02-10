@@ -41,26 +41,16 @@ public class Action {
 					calculatorFrame = new CalculatorFrame();
 					calculatorFrame.setVisible(true);
 
-					calculatorFrame.getBtn0()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn0().getText()));
-					calculatorFrame.getBtn1()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn1().getText()));
-					calculatorFrame.getBtn2()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn2().getText()));
-					calculatorFrame.getBtn3()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn3().getText()));
-					calculatorFrame.getBtn4()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn4().getText()));
-					calculatorFrame.getBtn5()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn5().getText()));
-					calculatorFrame.getBtn6()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn6().getText()));
-					calculatorFrame.getBtn7()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn7().getText()));
-					calculatorFrame.getBtn8()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn8().getText()));
-					calculatorFrame.getBtn9()
-							.addActionListener(e -> onClickBtnNumber(calculatorFrame.getBtn9().getText()));
+					calculatorFrame.getBtn0().addActionListener(e -> onClickBtnNumber(Constans.ZERO));
+					calculatorFrame.getBtn1().addActionListener(e -> onClickBtnNumber(Constans.ONE));
+					calculatorFrame.getBtn2().addActionListener(e -> onClickBtnNumber(Constans.TWO));
+					calculatorFrame.getBtn3().addActionListener(e -> onClickBtnNumber(Constans.THREE));
+					calculatorFrame.getBtn4().addActionListener(e -> onClickBtnNumber(Constans.FOUR));
+					calculatorFrame.getBtn5().addActionListener(e -> onClickBtnNumber(Constans.FIVE));
+					calculatorFrame.getBtn6().addActionListener(e -> onClickBtnNumber(Constans.SIX));
+					calculatorFrame.getBtn7().addActionListener(e -> onClickBtnNumber(Constans.SEVEN));
+					calculatorFrame.getBtn8().addActionListener(e -> onClickBtnNumber(Constans.EIGHT));
+					calculatorFrame.getBtn9().addActionListener(e -> onClickBtnNumber(Constans.NINE));
 
 					calculatorFrame.getBtnPlusSign().addActionListener(e -> onClickBtnSign(Constans.PLUS_SIGN));
 					calculatorFrame.getBtnMinusSign().addActionListener(e -> onClickBtnSign(Constans.MINUS_SIGN));

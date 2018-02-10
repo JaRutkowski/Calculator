@@ -3,7 +3,7 @@ package com.javafee.model;
 /**
  * The base class for specific calculation classes.
  * 
- * @author radek95
+ * @author JaRutkowski
  */
 public abstract class Calculation {
 	private Double firstVariable = null;
