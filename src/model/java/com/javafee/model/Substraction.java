@@ -12,14 +12,14 @@ import java.util.Arrays;
 public class Substraction extends Calculation {
 	@Override
 	public Double calculate(Double firstVariable, Double secondVariable) {
-		return firstVariable / secondVariable;
+		return firstVariable - secondVariable;
 	}
 
 	@Override
 	public Double calculate(String firstVariable, String secondVariable) {
 		Double result = null;
 		try{
-			result = Double.parseDouble(firstVariable) / Double.parseDouble(secondVariable);
+			result = Double.parseDouble(firstVariable) - Double.parseDouble(secondVariable);
 		} catch(NullPointerException | NumberFormatException e) {
 			e.printStackTrace();
 		}
@@ -32,7 +32,7 @@ public class Substraction extends Calculation {
 		if (!Arrays.asList(values).contains(null)) {
 			result = new Double(0);
 			for (double val : values)
-				result /= val;
+				result -= val;
 		}
 		return result;
 	}

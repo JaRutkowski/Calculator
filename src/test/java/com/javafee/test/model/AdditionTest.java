@@ -1,12 +1,7 @@
 package com.javafee.test.model;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 import com.javafee.model.Addition;
 
@@ -18,53 +13,26 @@ import com.javafee.model.Addition;
  * @see Addition
  * @see com.javafee.test.model
  */
+@RunWith(Parameterized.class)
 class AdditionTest {
-	private Addition addition = new Addition();
-
-	@BeforeEach
-	public void init() {
-		addition.setFirstVariable(5.0);
-		addition.setSecondVariable(5.0);
-	}
-
-	/**
-	 * Test method for two variables in type Double.
-	 * {@link com.javafee.model.Addition#calculate(java.lang.Double, java.lang.Double)}.
-	 */
-	@Test
-	void testCalculateDoubleDouble() {
-		assertEquals(Double.valueOf(10.0),
-				addition.calculate(addition.getFirstVariable(), addition.getSecondVariable()));
-	}
-
-	/**
-	 * Test method for variable in type null.
-	 * {@link com.javafee.model.Addition#calculate(java.lang.Double, java.lang.Double)}.
-	 */
-	// @Test
-	// void testCalculateNull() {
-	// addition.setFirtVariable(null);
-	// addition.setSecondVariable(null);
-	// assertNotNull("null", addition.calculate(addition.getFirtVariable(),
-	// addition.getSecondVariable()));
+	// private Addition addition;
+	//
+	// @BeforeEach
+	// public void initialize() {
+	// this.addition = new Addition();
 	// }
-
-	// /**
-	// * Test method for
-	// * {@link com.javafee.model.Addition#calculate(java.lang.Double[])}.
-	// */
-	// @Test
-	// void testCalculateDoubleArray() {
-	// fail("Not yet implemented");
+	//
+	// @DisplayName("Should calculate the correct sum")
+	// @ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
+	// @MethodSource("sumProvider")
+	// void sum(Double a, Double b, Double sum) {
+	// assertEquals(sum, addition.calculate(a, b));
 	// }
-
-	// /**
-	// * Test method for
-	// * {@link com.javafee.model.Addition#calculate(java.lang.String,
-	// java.lang.String)}.
-	// */
-	// @Test
-	// void testCalculateStringString() {
-	// fail("Not yet implemented");
+	//
+	// private static Stream<Arguments> sumProvider() {
+	// return Stream.of(
+	// Arguments.of(1.0, 1.0, 2.0),
+	// Arguments.of(2.0, 3.0, 5.0)
+	// );
 	// }
 }
