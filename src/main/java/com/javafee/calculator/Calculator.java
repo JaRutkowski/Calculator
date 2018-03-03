@@ -24,4 +24,20 @@ public class Calculator {
 		Action action = new Action();
 		action.control();
 	}
+	
+	private class A {
+		private String test = "";
+
+		A() {
+
+		}
+
+		public void dummy(int number) {
+			number = 10;
+			if (number == 0) {
+				System.out.println("Zero");
+			}
+		}
+
+	}
 }
